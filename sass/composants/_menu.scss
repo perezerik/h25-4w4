@@ -1,16 +1,14 @@
-.menu{
-    ul{
-        margin: 0;
-        padding: 0;
+/* -------------------------------------------- .menu */
+.menu{ //ul 
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap:10px 0;
+    &__li{// li
+        margin: 3px 0;
+        a{//a
+            text-decoration: none;
+            padding: 4px;
+        }
     }
-
-    li{
-        display: inline-block;
-    }
-
-    a{
-        color: #333;
-        text-decoration: none;
-    }
-
 }
