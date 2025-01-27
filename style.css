@@ -60,9 +60,14 @@ Les composants
 /* -------------------------------------------- .menu */
 .menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   list-style-type: none;
   gap: 10px 0;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    flex-direction: column;
+  }
 }
 .menu__li {
   margin: 3px 0;
@@ -111,12 +116,31 @@ Les layouts
   align-items: center;
 }
 .entete__navigation {
+  width: auto;
+  position: static;
+  flex-direction: row;
+  background-color: transparent;
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .entete__navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 20px;
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+.entete__logo img {
+  width: 50%;
 }
 
 .hero {
   background-image: url("images/maldives.jpg");
   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */
