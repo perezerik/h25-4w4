@@ -1,7 +1,7 @@
 /* -------------------------------------------- .menu */
 .menu{ //ul 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     list-style-type: none;
     gap:10px 0;
     &__li{// li
