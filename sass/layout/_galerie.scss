@@ -1,9 +1,22 @@
 .galerie{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
 
     &__img{
-        width: 20vw;
+        width: 15vw;
+        height: 10vw;
+        
     }
+    @media screen and (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);    
+        width: 40vw; 
+        height: 30vw; 
+    }
+    
+}
+
+h3{
+    text-align: center;
 }
