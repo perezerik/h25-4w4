@@ -106,6 +106,11 @@ Les composants
   flex: 0 0 20px;
   padding: 3px;
 }
+@media screen and (max-width: 800px) {
+  .recherche {
+    display: none;
+  }
+}
 
 /* ///////////////////////////////////
 Les layouts
@@ -131,59 +136,69 @@ Les layouts
 @media screen and (max-width: 800px) {
   .entete__navigation {
     position: absolute;
-    top: 0;
+    top: 110px;
     right: 0;
     background-color: #fff;
     padding: 20px;
     flex-direction: column;
     width: 100vw;
+    transform: translateX(-200%);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.005, 1);
+    text-align: center;
   }
 }
 .entete__logo img {
   width: 20vw;
 }
 
-.trait {
-  background: black;
-  width: 30px;
-  height: 2px;
-  margin-bottom: 10px;
-  transition: 0.2s;
+/*Rendre invisible le checkbox */
+#maCheckbox {
+  display: none;
 }
 
-/* background pour le label */
-label {
-  background-color: white;
-  width: 30px;
-  height: 26px;
-  display: block;
+@media screen and (max-width: 800px) {
+  .trait {
+    top: 0;
+    right: 0;
+    background: black;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+  }
+  /* background pour le label */
+  label {
+    background-color: white;
+    width: 30px;
+    height: 26px;
+    display: block;
+  }
+  /*Translation rotation et transition du 1er trait */
+  #maCheckbox:checked ~ label .trait:nth-of-type(1) {
+    transform: translateY(12px) rotate(45deg);
+    transition: 0.2s;
+  }
+  /*Translation rotation et transition du 3eme trait */
+  #maCheckbox:checked ~ label .trait:nth-of-type(3) {
+    transform: translateY(-12px) rotate(-45deg);
+    transition: 0.2s;
+  }
+  /*Transition du 2eme trait */
+  #maCheckbox:checked ~ label .trait:nth-of-type(2) {
+    transform: scale(0);
+    transition: 0.2s;
+  }
+  #maCheckbox:checked ~ .entete__navigation {
+    transform: translateX(0);
+  }
 }
-
-/*Translation rotation et transition du 1er trait */
-#maCheckbox:checked ~ label .trait:nth-of-type(1) {
-  transform: translateY(12px) rotate(45deg);
-  transition: 0.2s;
-}
-
-/*Translation rotation et transition du 3eme trait */
-#maCheckbox:checked ~ label .trait:nth-of-type(3) {
-  transform: translateY(-12px) rotate(-45deg);
-  transition: 0.2s;
-}
-
-/*Transition du 2eme trait */
-#maCheckbox:checked ~ label .trait:nth-of-type(2) {
-  transform: scale(0);
-  transition: 0.2s;
-}
-
 .galerie {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .galerie__img {
-  width: 15vw;
+  width: 15 vw;
   height: 10vw;
 }
 @media screen and (max-width: 800px) {

@@ -2,15 +2,14 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    
 
     &__img{
-        width: 15vw;
+        width: 15 vw;
         height: 10vw;
         
     }
     @media screen and (max-width: 800px) {
-        grid-template-columns: repeat(2, 1fr);    
+        grid-template-columns: repeat(2, 1fr);  
         width: 40vw; 
         height: 30vw; 
     }
