@@ -24,7 +24,7 @@ Les variables
 Les balises de base
 ////////////////////////////////////// */
 @import "base/simple";
-
+@import "base/liens";
 /* ///////////////////////////////////
 Les composants
 ////////////////////////////////////// */
@@ -38,4 +38,8 @@ Les layouts
 @import "layout/entete";
 @import "layout/galerie";
 @import "layout/hero";
+@import "layout/inscription";
+
+
+
 
