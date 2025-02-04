@@ -216,7 +216,7 @@ Les layouts
 @media screen and (max-width: 800px) {
   .galerie {
     grid-template-columns: repeat(2, 1fr);
-    width: 80%;
+    width: 81%;
   }
 }
 
