@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/*
+Theme Name: TP1 Erik Perez
+Theme URI: https://wordpress.org/themes/twentytwenty/
+Author: Erik Perez
+Author URI: https://github.com/perezerik
+Description: Thème dévelopé dans le cadre du cours 4w4
+Version: 1.0
+Requires at least: 6.0
+Tested up to: 5.3
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tp1-ep
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* ////////////////////////////////////
+Les variables
+////////////////////////////////////// */
+/* ///////////////////////////////////
+Les balises de base
+////////////////////////////////////// */
+body {
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 5rem);
+  text-shadow: 3px 3px 5px cyan;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 2.3vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
+}
+
+h5 {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+}
+
+h6 {
+  font-size: clamp(0.8rem, 1.7vw, 1.2rem);
+}
+
+p {
+  font-size: clamp(0.8rem, 1.7vw, 1rem);
+}
+
+a {
+  color: #5d5;
+}
+
+/* ///////////////////////////////////
+Les composants
+////////////////////////////////////// */
+/* -------------------------------------------- .menu */
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 10px 0;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    flex-direction: column;
+  }
+}
+.menu__li {
+  margin: 3px 0;
+}
+.menu__li a {
+  text-decoration: none;
+  padding: 4px;
+}
+
+.recherche {
+  display: flex;
+  height: 1.6rem;
+  width: 14rem;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+}
+.recherche__input {
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.01);
+  flex: 1 0 auto;
+  padding: 3px;
+}
+.recherche__input:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.recherche__input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+.recherche__img {
+  flex: 0 0 20px;
+  padding: 3px;
+}
+@media screen and (max-width: 800px) {
+  .recherche {
+    display: none;
+  }
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.carte--grande {
+  flex: 1 1 250px;
+}
+.carte__image img {
+  width: 100%;
+}
+.carte__contenu {
+  background-color: aliceblue;
+}
+/* ///////////////////////////////////
+Les layouts
+////////////////////////////////////// */
+.global {
+  max-width: 1100px;
+  padding: 10vh 5vw;
+}
+
+.entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.entete__navigation {
+  width: auto;
+  position: static;
+  flex-direction: row;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .entete__navigation {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    background-color: #fff;
+    padding: 20px;
+    flex-direction: column;
+    width: 100vw;
+    transform: translateX(-200%);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.005, 1);
+    text-align: center;
+  }
+}
+.entete__logo img {
+  width: 20vw;
+}
+
+/*Rendre invisible le checkbox */
+#maCheckbox {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .trait {
+    top: 0;
+    right: 0;
+    background: black;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+  }
+  /* background pour le label */
+  label {
+    background-color: white;
+    width: 30px;
+    height: 26px;
+    display: block;
+  }
+  /*Translation rotation et transition du 1er trait */
+  #maCheckbox:checked ~ label .trait:nth-of-type(1) {
+    transform: translateY(12px) rotate(45deg);
+    transition: 0.2s;
+  }
+  /*Translation rotation et transition du 3eme trait */
+  #maCheckbox:checked ~ label .trait:nth-of-type(3) {
+    transform: translateY(-12px) rotate(-45deg);
+    transition: 0.2s;
+  }
+  /*Transition du 2eme trait */
+  #maCheckbox:checked ~ label .trait:nth-of-type(2) {
+    transform: scale(0);
+    transition: 0.2s;
+  }
+  #maCheckbox:checked ~ .entete__navigation {
+    transform: translateX(0);
+  }
+}
+.galerie {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+}
+.galerie__figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.galerie__img {
+  width: 200px;
+  height: 150px;
+  height: auto;
+  object-fit: cover;
+}
+@media screen and (max-width: 800px) {
+  .galerie {
+    grid-template-columns: repeat(2, 1fr);
+    width: 81%;
+  }
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero {
+  background-image: url("images/maldives.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero__button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid cyan;
+  border-radius: 5px;
+  background-color: cyan;
+}
+
+.inscription {
+  width: fit-content;
+  background: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: -2rem auto 0 auto;
+  z-index: 1;
+}
+.inscription__form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 800px) {
+  .inscription__form {
+    flex-direction: column;
+  }
+}
+.inscription__info {
+  display: flex;
+  flex-direction: column;
+}
+.inscription label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.inscription input {
+  padding: 8px;
+  border: 1px solid #00bcd4;
+  border-radius: 3px;
+  width: 160px;
+  outline: none;
+}
+.inscription input::placeholder {
+  color: #aaa;
+}/*# sourceMappingURL=style.css.map */
