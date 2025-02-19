@@ -74,10 +74,7 @@ Les composants
     flex-direction: column;
   }
 }
-.menu__li {
-  margin: 3px 0;
-}
-.menu__li a {
+.menu-item a {
   text-decoration: none;
   padding: 4px;
 }
@@ -296,4 +293,35 @@ h3 {
 }
 .inscription input::placeholder {
   color: #aaa;
+}
+
+/*
+----------------Layout du pied de page 
+*/
+footer {
+  background-color: rgb(236, 136, 13);
+  color: black;
+}
+
+.piedpage {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.piedpage__s1__externe {
+  flex: 0 0 20%;
+}
+.piedpage__s1__externe .menu {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1__adresse {
+  flex: 0 0 40%;
+}
+.piedpage__s1__description {
+  flex: 1 0 400px;
 }/*# sourceMappingURL=style.css.map */
