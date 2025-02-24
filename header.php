@@ -13,7 +13,11 @@
     <header>
         <div class="entete">
             <figure class="entete__logo">
-                <img src="images/logo.webp" alt="logo">
+                <?php  
+                    if (function_exists('the_custom_logo')) {
+                        the_custom_logo();
+                    }
+                ?>
             </figure>
             <input type="checkbox" id="maCheckbox" aria-label="menu-burger">
             <label for="maCheckbox">
@@ -27,10 +31,11 @@
                     'container' => 'nav',
                     'container_class' => 'entete__menu'
                 )); ?>
-                <form class="recherche">
+                <?php  get_search_form() ?>
+                <!-- <form class="recherche">
                     <input type="search" placeholder="Rechercher" class="recherche__input">
                     <img class="recherche__img"  src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=000" width="16" height="16">
-                </form>
+                </form> -->
             </div>
         </div>
     </header>

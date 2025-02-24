@@ -1,5 +1,4 @@
 <?php get_header();?>
-<h1>--------------------FRONTPAGE</h1>
     <section class = "hero">
             <div class="hero__contenu global">
                 <h1 class="hero__titre">Voyagez dans le monde avec Voyages du Monde</h1>

@@ -161,6 +161,10 @@ Les layouts
 .entete__logo img {
   width: 20vw;
 }
+.entete .custom-logo {
+  max-width: 250px;
+  height: auto;
+}
 
 /*Rendre invisible le checkbox */
 #maCheckbox {
