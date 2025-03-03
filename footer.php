@@ -19,7 +19,11 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, nostrum sint deserunt architecto dolorem nisi delectus pariatur odit eius! Maiores dolore provident soluta culpa minus nesciunt doloremque vero incidunt accusamus!
       </div>
     </section>
-    <section class="piedpage__s2"></section>
+    <section class="piedpage__s2">
+      <div class="">
+        
+      </div>
+    </section>
     <section class="piedpage__s3"></section>
   </div>
 </footer>
