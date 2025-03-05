@@ -56,7 +56,7 @@ p {
 }
 
 a {
-  color: #5d5;
+  color: rgb(85, 115, 221);
 }
 
 /* ///////////////////////////////////
@@ -212,39 +212,6 @@ Les layouts
     transform: translateX(0);
   }
 }
-.galerie {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  margin: auto;
-}
-.galerie__figure {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.galerie__img {
-  width: 200px;
-  height: 150px;
-  height: auto;
-  object-fit: cover;
-}
-@media screen and (max-width: 800px) {
-  .galerie {
-    grid-template-columns: repeat(2, 1fr);
-    width: 81%;
-  }
-}
-
-h3 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .hero {
   background-image: url("images/maldives.jpg");
   min-height: 100vh;
@@ -310,27 +277,45 @@ h3 {
 footer {
   background-color: rgb(236, 136, 13);
   color: black;
+  width: 100%;
 }
 
 .piedpage {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 .piedpage__s1 {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+  width: 100%;
 }
 .piedpage__s1__externe {
-  flex: 0 0 20%;
+  flex: 1 0 20%;
 }
 .piedpage__s1__externe .menu {
   display: flex;
   flex-direction: column;
 }
 .piedpage__s1__adresse {
-  flex: 0 0 40%;
+  flex: 1 0 40%;
+}
+.piedpage__s1__adresse__coord {
+  padding: 20px;
+}
+.piedpage__s1__adresse__recherche {
+  padding: 20px;
 }
 .piedpage__s1__description {
   flex: 1 0 400px;
+}
+.piedpage__s1__mission {
+  flex: 1 0 30%;
+}
+.piedpage__s2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -45,7 +45,7 @@
             
         </form>
     </section>
-    <section class="galerie">
+    <!-- <section class="galerie">
         <h3>Nos destinations favorites</h3>
         <div class="galerie global">
             <figure class="galerie__figure">
@@ -79,7 +79,7 @@
                 <img class ="galerie__img" src="images/paysage10.jpg" alt="paysage10" class="galerie__img">
             </figure>
         </div>
-    </section>
+    </section> -->
     <section class="populaire">
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); 
