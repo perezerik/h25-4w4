@@ -42,21 +42,43 @@
         color: #777;
       }
     }
-    &__bouton {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border: none;
-        border-radius: 4px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        
-        
 
-      & .post-category{
-        
+    &__bouton {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      
+      &:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
       }
-  }
+
+    }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    & .post-categories{
+      
+      display: flex;
+      justify-content: space-around;
+      list-style-type:none ;
+      
+      li{
+        border-radius: 4px;
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+        background-color: #007bff;
+      }
+      
+    }
 }
