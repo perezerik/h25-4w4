@@ -1,8 +1,13 @@
+<?php  
+    $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');  
+    $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');  
+    $footer_mission = get_theme_mod('footer_mission', 'Default Title'); 
+  ?>
 <footer>
   <div class="piedpage global">
     <section class="piedpage__s1">
       <div class="piedpage__s1__externe">
-        LIENS SUR LES VOYAGES
+        <h4>LIENS SUR LES VOYAGES</h4>
         <?php wp_nav_menu(array(
           "menu" => "externe",
           "container" => "nav",
@@ -10,21 +15,21 @@
         
       </div>
       <div class="piedpage__s1__adresse">
-        ADRESSE ET RECHERCHE
+        <h4>ADRESSE ET RECHERCHE</h4>
         <div class="piedpage__s1__adresse__coord">
-          5800 Sherbrooke-est Montréal (Québec) H1X 2A2
+          <?php  echo $footer_adresse; ?>
         </div>
         <div class="piedpage__s1__description">
-          Téléphone: (514) 254-7131
+          Téléphone: <?php  echo $footer_telephone; ?>
         </div>
         <div class="piedpage__s1__adresse__recherche">
           <?php get_search_form(); ?>
         </div>
       </div>
       <div class="piedpage__s1__mission">
-        MISSION DU CLUB
+         <h4>MISSION DU CLUB</h4>
         <div class="piedpage__s1_mission_texte">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut fugiat animi, officia minus voluptates commodi. Natus quis expedita veritatis corporis a tempore, modi ipsam, eos, non ut odio facilis cupiditate.
+          <?php  echo $footer_mission; ?>
         </div>
       </div>
     </section>

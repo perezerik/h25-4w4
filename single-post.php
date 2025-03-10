@@ -9,6 +9,7 @@
             ?>
                 <h2><?php the_title(); ?></h2>
                 <div><?php the_content() ?>
+                <?php the_category(); ?>
                 <p>Température maximum : <?php  the_field('temperature_maximum'); ?> C&#176; </p>
                 <p>Température minimum : <?php  the_field('temperature_minimum'); ?> C&#176;</p>
                 <p>Température moyenne : <?php  the_field('temperature_moyenne'); ?> C&#176;</p>
