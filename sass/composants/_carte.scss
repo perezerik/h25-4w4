@@ -1,6 +1,7 @@
 .carte {
     display: flex;
     flex-direction: column;
+    text-align: center;
     justify-content: space-between;
     background-color: white;
     border-radius: 8px;
@@ -22,6 +23,11 @@
       padding: 20px;
       background-color: aliceblue;
       flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center; // Centre les éléments verticalement
+      text-align: center; // Centre le texte
+
   
       &__titre {
         font-size: 1.5rem;
@@ -54,6 +60,7 @@
       transition: background-color 0.3s ease, transform 0.2s ease;
       margin-right: 10px;
       margin-bottom: 10px;
+      text-align: center;
       
       &:hover {
         background-color: #0056b3;
@@ -66,19 +73,32 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
-    & .post-categories{
-      
-      display: flex;
-      justify-content: space-around;
-      list-style-type:none ;
-      
-      li{
-        border-radius: 4px;
-        text-decoration: none;
-        color: white;
-        padding: 15px;
-        background-color: #007bff;
-      }
-      
+}
+
+ .post-categories{
+  display: flex;
+  list-style-type:none ;
+  justify-content: center;
+  gap:10px;
+  padding: 0;
+  li{
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 15px;
+    background-color: #007bff;
+    text-align: center;
+
+    &:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
     }
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+  
 }

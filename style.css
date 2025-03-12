@@ -112,6 +112,7 @@ Les composants
 .carte {
   display: flex;
   flex-direction: column;
+  text-align: center;
   justify-content: space-between;
   background-color: white;
   border-radius: 8px;
@@ -129,6 +130,10 @@ Les composants
   padding: 20px;
   background-color: aliceblue;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .carte__contenu__titre {
   font-size: 1.5rem;
@@ -157,6 +162,7 @@ Les composants
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-right: 10px;
   margin-bottom: 10px;
+  text-align: center;
 }
 .carte__bouton:hover {
   background-color: #0056b3;
@@ -166,17 +172,28 @@ Les composants
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-.carte .post-categories {
+
+.post-categories {
   display: flex;
-  justify-content: space-around;
   list-style-type: none;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
 }
-.carte .post-categories li {
+.post-categories li {
   border-radius: 4px;
   text-decoration: none;
-  color: white;
   padding: 15px;
   background-color: #007bff;
+  text-align: center;
+}
+.post-categories li:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+.post-categories a {
+  color: white;
+  text-decoration: none;
 }
 
 /* ///////////////////////////////////

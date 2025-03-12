@@ -1,12 +1,12 @@
 <?php get_header();?>
 <?php  
-    $hero_auteur = get_theme_mod('hero_auteur', 'Default Title'); 
+    
     $hero_background = get_theme_mod('hero_background', '');
     $hero_couleur = get_theme_mod('hero_couleur', '');
 ?>
     <section class = "hero" style="background-image: url(<?php echo $hero_background ?>);  color: <?php echo $hero_couleur?>";>
             <div class="hero__contenu global">
-                <?php  get_template_part('gabarits/informations'); ?>
+                <?php  get_template_part('gabarits/hero'); ?>
                 <div class="hero__icone">
                     <?php  get_template_part('gabarits/icones'); ?>
                 </div>
