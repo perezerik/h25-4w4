@@ -51,41 +51,6 @@
             
         </form>
     </section>
-    <!-- <section class="galerie">
-        <h3>Nos destinations favorites</h3>
-        <div class="galerie global">
-            <figure class="galerie__figure">
-                <img class ="galerie__img" src="images/paysage1.jpg" alt="paysage1" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img class ="galerie__img" src="images/paysage2.jpg" alt="paysage2" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img class ="galerie__img" src="images/paysage3.jpg" alt="paysage3" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img class ="galerie__img" src="images/paysage4.jpg" alt="paysage4" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img class ="galerie__img" src="images/paysage5.jpg" alt="paysage5" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img class ="galerie__img" src="images/paysage6.jpg" alt="paysage6" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img class ="galerie__img" src="images/paysage7.jpg" alt="paysage7" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img class ="galerie__img" src="images/paysage8.jpg" alt="paysage8" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img class ="galerie__img" src="images/paysage9.jpg" alt="paysage9" class="galerie__img">
-            </figure>
-            <figure class="galerie__figure">
-                <img class ="galerie__img" src="images/paysage10.jpg" alt="paysage10" class="galerie__img">
-            </figure>
-        </div>
-    </section> -->
     <section class="populaire">
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); 
