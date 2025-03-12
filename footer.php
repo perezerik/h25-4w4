@@ -4,7 +4,7 @@
     $footer_mission = get_theme_mod('footer_mission', 'Default Title'); 
   ?>
 <footer>
-  <div class="piedpage global">
+  <div class="piedpage">
     <section class="piedpage__s1">
       <div class="piedpage__s1__externe">
         <h4>LIENS SUR LES VOYAGES</h4>

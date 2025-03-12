@@ -185,6 +185,7 @@ Les layouts
 .global {
   max-width: 1100px;
   padding: 10vh 5vw;
+  margin: 0 auto;
 }
 
 .populaire .global {
