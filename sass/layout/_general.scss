@@ -1,10 +1,11 @@
 .global{
     max-width: 1100px;
     padding: 10vh 5vw;
-    margin: 0 auto;
+    
 }
 
 .populaire .global{
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
