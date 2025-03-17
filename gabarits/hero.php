@@ -14,5 +14,8 @@
 <p class="hero__adresse">
     5800 Sherbrooke-est Montréal (Québec) H1X 2A2
 </p>
+<p class="hero__telephone">
+    (514) 254-7131
+</p>
 <p class="hero__auteur">Auteur: <?php  echo $hero_auteur ?></p>
 <button class="hero__button">S'inscrire</button>
