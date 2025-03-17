@@ -135,38 +135,29 @@ Les composants
   align-items: center;
   text-align: center;
 }
-.carte__contenu__titre {
+.carte__titre {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 0 10px;
   color: #333;
 }
-.carte__contenu__description {
+.carte__titre__lien {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+.carte__titre__lien:hover {
+  color: #007bff;
+}
+.carte__description {
   font-size: 1rem;
   color: #555;
-  line-height: 1.5;
+  line-height: 1.5rem;
   margin-bottom: 15px;
 }
-.carte__contenu p {
+.carte p {
   font-size: 0.9rem;
   color: #777;
-}
-.carte__bouton {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.carte__bouton:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
 }
 .carte:hover {
   transform: translateY(-5px);
