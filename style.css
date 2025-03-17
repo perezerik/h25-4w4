@@ -139,6 +139,7 @@ Les composants
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 0 10px;
+  padding-top: 10px;
   color: #333;
 }
 .carte__titre__lien {

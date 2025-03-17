@@ -16,7 +16,7 @@
       </a>
     </h4>
     <p class="carte__description"><?php echo wp_trim_words(get_the_content(),10, " ... " ); ?></p>
-    <?php the_category(); ?>
+    <?php if(!is_category()) {the_category();} ?>
     <p>Température maximum : <?php the_field('temperature_maximum'); ?> C</p>
   </div>
 </article>
