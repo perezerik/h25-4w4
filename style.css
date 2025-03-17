@@ -351,20 +351,17 @@ Les layouts
 footer {
   background-color: rgb(236, 136, 13);
   color: black;
-  width: 100%;
 }
 
 .piedpage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
 }
 .piedpage__s1 {
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
-  width: 100%;
 }
 .piedpage__s1__externe {
   flex: 1 0 20%;
