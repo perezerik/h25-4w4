@@ -196,6 +196,15 @@ Les layouts
   padding: 10vh 5vw;
 }
 
+.categorie__titre {
+  margin-left: 20px;
+}
+
+.categorie__description {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .populaire .global {
   display: flex;
   flex-wrap: wrap;
