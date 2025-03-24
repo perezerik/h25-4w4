@@ -403,4 +403,8 @@ footer {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+}
+.page404__btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }/*# sourceMappingURL=style.css.map */
