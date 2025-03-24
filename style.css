@@ -398,6 +398,7 @@ footer {
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 100px;
 }
 .page404__btn {
   padding: 10px 20px;
