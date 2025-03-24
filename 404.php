@@ -1,15 +1,16 @@
 <?php get_header();?>
-    <section class="populaire">
-        <div class="global">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article>
-                <h2><?php the_title(); ?></h2>
-                <div><?php the_content() ?>
-            </article>
-            <?php endwhile; endif; ?>
-        </div>
-    </section>
-    <?php get_footer()?>
+<?php
+    $page_404_message = get_theme_mod('page_404_message', 'Default Title');
+?>
+    <div class="container text-center">
+        <h1><?php echo $page_404_message; ?></h1>
+        <p>Il semble que le lien que vous avez suivi n'existe pas.</p>
+        
+        <?php  get_search_form() ?>
+
+        <p><a href="<?php echo home_url(); ?>" class="btn">Retour à l'accueil</a></p>
+    </div>
+<?php get_footer()?>
 </body>
 </html>
 

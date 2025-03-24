@@ -88,7 +88,35 @@
         'section' => 'footer_section',
         'type' => 'text',
       ));
-      
+
+      /////////////// Page erreur 404
+        $wp_customize->add_section('page_404', array(
+          'title'    => 'Page 404',
+          'priority' => 30,
+      ));
+
+      // ///////////////// ajout de la donnée
+      $wp_customize->add_setting('page_404_message', array(
+          'default' => __('Oups ! Cette page est introuvable.', 'theme_4w4'),
+          'sanitize_callback' => 'sanitize_text_field',
+      ));
+
+      // ///////////////// ajout du contrôle de la donnée
+      $wp_customize->add_control('page_404_message', array(
+          'label' => __('Message d’erreur', 'theme_4w4'),
+          'section'  => 'page_404',
+          'type'     => 'text',
+      ));
+
+      $wp_customize->add_setting('background_404', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+      ));
+      ///////////////// ajout du contrôle de la donnée
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_404', array(
+        'label' => __('Image en arrière plan', 'theme_4w4'),
+        'section' => 'page_404',
+      )));
       
       }
       
