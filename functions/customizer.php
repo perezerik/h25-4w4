@@ -96,14 +96,38 @@
       ));
 
       // ///////////////// ajout de la donnée
-      $wp_customize->add_setting('page_404_message', array(
+      $wp_customize->add_setting('page_404_titre', array(
           'default' => __('Oups ! Cette page est introuvable.', 'theme_4w4'),
+          'sanitize_callback' => 'sanitize_text_field',
+      ));
+
+      // ///////////////// ajout du contrôle de la donnée
+      $wp_customize->add_control('page_404_titre', array(
+          'label' => __('Titre d’erreur', 'theme_4w4'),
+          'section'  => 'page_404',
+          'type'     => 'text',
+      ));
+
+      $wp_customize->add_setting('page_404_message', array(
+          'default' => __('Il semble que le lien que vous avez suivi n`existe pas.', 'theme_4w4'),
           'sanitize_callback' => 'sanitize_text_field',
       ));
 
       // ///////////////// ajout du contrôle de la donnée
       $wp_customize->add_control('page_404_message', array(
           'label' => __('Message d’erreur', 'theme_4w4'),
+          'section'  => 'page_404',
+          'type'     => 'text',
+      ));
+
+      $wp_customize->add_setting('page_404_suggestions', array(
+          'default' => __('Voici quelques suggestions.', 'theme_4w4'),
+          'sanitize_callback' => 'sanitize_text_field',
+      ));
+
+      // ///////////////// ajout du contrôle de la donnée
+      $wp_customize->add_control('page_404_suggestions', array(
+          'label' => __('Suggestion d’erreur', 'theme_4w4'),
           'section'  => 'page_404',
           'type'     => 'text',
       ));
