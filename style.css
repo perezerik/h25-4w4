@@ -431,4 +431,20 @@ footer {
 .page404__icones {
   padding-top: 20px;
   display: flex;
+}
+
+.page404_intra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+}
+.page404_intra__btn {
+  padding: 10px 20px;
+  background: #f2eb26;
+  color: #b8b8b8;
+  text-decoration: none;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
