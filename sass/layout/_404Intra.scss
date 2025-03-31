@@ -6,11 +6,55 @@
     background-size: cover;
     padding: 100px;
 
-    &__btn {
-        padding: 10px 20px;
-        background: #f2eb26;
-        color: #b8b8b8;
-        text-decoration: none;
-        border-radius: 5px;
+    h1,h3{
+        background: rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 800px;
+        text-align: center;
     }
+
+    &__btn {
+        padding: 15px 25px;
+        background: yellow;
+        color: #001f3f;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 10px;
+        margin-top: 20px;
+        display: inline-block;
+
+   
+    }
+
+    .menu-suggestions-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .menu-suggestions-container ul {
+        display: flex; 
+        flex-wrap: wrap;
+        gap: 15px; 
+        padding: 0; 
+        list-style: none; 
+    }
+    
+    .menu-suggestions-container li {
+        margin: 0; // Ensures no unexpected margins
+    }
+    
+    .menu-suggestions-container a {
+        padding: 10px 15px;
+        background: rgba(77, 199, 233, 0.3);
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        text-align: center;
+    }
+
 }
+
+

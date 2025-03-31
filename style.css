@@ -441,10 +441,44 @@ footer {
   background-size: cover;
   padding: 100px;
 }
+.page404_intra h1, .page404_intra h3 {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: center;
+}
 .page404_intra__btn {
-  padding: 10px 20px;
-  background: #f2eb26;
-  color: #b8b8b8;
+  padding: 15px 25px;
+  background: yellow;
+  color: #001f3f;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-decoration: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.page404_intra .menu-suggestions-container {
+  display: flex;
+  flex-direction: row;
+}
+.page404_intra .menu-suggestions-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+.page404_intra .menu-suggestions-container li {
+  margin: 0;
+}
+.page404_intra .menu-suggestions-container a {
+  padding: 10px 15px;
+  background: rgba(77, 199, 233, 0.3);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
   border-radius: 5px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
