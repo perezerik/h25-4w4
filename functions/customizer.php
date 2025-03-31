@@ -150,7 +150,7 @@
 
     // ///////////////// ajout de la donnée
     $wp_customize->add_setting('page_404_titre_intra', array(
-        'default' => __('Oups ! Cette page est introuvable.', 'theme_4w4'),
+        'default' => __('Oops, vous avez échoué sur lile 404', 'theme_4w4'),
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
@@ -162,7 +162,7 @@
     ));
 
     $wp_customize->add_setting('page_404_message_intra', array(
-        'default' => __('Il semble que le lien que vous avez suivi n`existe pas.', 'theme_4w4'),
+        'default' => __('Pas de panique, cher membre explorateur ! Vous avez dérivé un peu trop loin des destinations de rêve que notre club a soigneusement sélectionnées pour vous. Reprenez votre périple en cliquant sur Accueil pour découvrir à nouveau nos voyages d’exception !', 'theme_4w4'),
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
