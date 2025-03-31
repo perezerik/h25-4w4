@@ -461,17 +461,21 @@ footer {
 }
 .page404_intra .menu-suggestions-container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .page404_intra .menu-suggestions-container ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 30px;
   padding: 0;
-  list-style: none;
+  justify-content: center;
+  text-align: center;
 }
 .page404_intra .menu-suggestions-container li {
-  margin: 0;
+  display: inline-block;
+  white-space: nowrap;
 }
 .page404_intra .menu-suggestions-container a {
   padding: 10px 15px;

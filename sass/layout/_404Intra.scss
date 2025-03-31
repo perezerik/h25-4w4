@@ -30,20 +30,24 @@
 
     .menu-suggestions-container {
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        align-items: center; 
     }
     
     .menu-suggestions-container ul {
-        display: flex; 
-        flex-wrap: wrap;
-        gap: 15px; 
-        padding: 0; 
-        list-style: none; 
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 30px;
+        padding: 0;
+        justify-content: center; 
+        text-align: center; 
+    }
+    .menu-suggestions-container li {
+        display: inline-block; // Ensures items remain in a row and wrap naturally
+        white-space: nowrap; // Prevents text from wrapping inside the item
     }
     
-    .menu-suggestions-container li {
-        margin: 0; // Ensures no unexpected margins
-    }
     
     .menu-suggestions-container a {
         padding: 10px 15px;
@@ -53,8 +57,7 @@
         font-weight: bold;
         border-radius: 5px;
         text-align: center;
-    }
-
+    } 
 }
 
 
