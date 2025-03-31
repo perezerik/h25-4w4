@@ -5,7 +5,7 @@
     $page_404_titre_intra = get_theme_mod('page_404_titre_intra', 'Default Title');
     $page_404_message_intra = get_theme_mod('page_404_message_intra', 'Default Title');
     $background_404_intra = get_theme_mod('background_404_intra', '');
-    $couleur_404 = get_theme_mod('page_404_intra', '');
+    $couleur_404 = get_theme_mod('section_404', '');
 
 ?>
 <div class = "page404_intra" style="background-image: url(<?php echo $background_404_intra ?>)";>

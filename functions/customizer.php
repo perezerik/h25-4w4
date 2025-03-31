@@ -143,7 +143,7 @@
       )));
 
       /////////////// Page erreur 404 Intra
-      $wp_customize->add_section('page_404_intra', array(
+      $wp_customize->add_section('section_404', array(
         'title'    => 'Page 404',
         'priority' => 30,
     ));
@@ -157,7 +157,7 @@
     // ///////////////// ajout du contrôle de la donnée
     $wp_customize->add_control('page_404_titre_intra', array(
         'label' => __('Titre d’erreur', 'theme_4w4'),
-        'section'  => 'page_404_intra',
+        'section'  => 'section_404',
         'type'     => 'text',
     ));
 
@@ -169,20 +169,20 @@
     // ///////////////// ajout du contrôle de la donnée
     $wp_customize->add_control('page_404_message_intra', array(
         'label' => __('Message d’erreur', 'theme_4w4'),
-        'section'  => 'page_404_intra',
+        'section'  => 'section_404',
         'type'     => 'text',
     ));
 
     /////////////////Début du champ couleur
       //////////////// ajout de la donnée couleur 
-      $wp_customize->add_setting('404_couleur', array(
+      $wp_customize->add_setting('couleur_404', array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',
       ));
       ///////////////// ajout du contrôle de la donnée
-      $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_couleur', array(
+      $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'couleur_404', array(
         'label' => __('Sélectionner une couleur', 'theme_4w4'),
-        'section' => 'page_404_intra',
+        'section' => 'section_404',
       )));
     
     // Background 404 intra
@@ -193,7 +193,7 @@
     ///////////////// ajout du contrôle de la donnée
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_404', array(
       'label' => __('Image en arrière plan', 'theme_4w4'),
-      'section' => 'page_404_intra',
+      'section' => 'section_404',
     )));
       
       }
