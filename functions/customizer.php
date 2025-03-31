@@ -141,6 +141,60 @@
         'label' => __('Image en arrière plan', 'theme_4w4'),
         'section' => 'page_404',
       )));
+
+      /////////////// Page erreur 404 Intra
+      $wp_customize->add_section('page_404_intra', array(
+        'title'    => 'Page 404',
+        'priority' => 30,
+    ));
+
+    // ///////////////// ajout de la donnée
+    $wp_customize->add_setting('page_404_titre_intra', array(
+        'default' => __('Oups ! Cette page est introuvable.', 'theme_4w4'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    // ///////////////// ajout du contrôle de la donnée
+    $wp_customize->add_control('page_404_titre_intra', array(
+        'label' => __('Titre d’erreur', 'theme_4w4'),
+        'section'  => 'page_404_intra',
+        'type'     => 'text',
+    ));
+
+    $wp_customize->add_setting('page_404_message_intra', array(
+        'default' => __('Il semble que le lien que vous avez suivi n`existe pas.', 'theme_4w4'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    // ///////////////// ajout du contrôle de la donnée
+    $wp_customize->add_control('page_404_message_intra', array(
+        'label' => __('Message d’erreur', 'theme_4w4'),
+        'section'  => 'page_404_intra',
+        'type'     => 'text',
+    ));
+
+    /////////////////Début du champ couleur
+      //////////////// ajout de la donnée couleur 
+      $wp_customize->add_setting('404_couleur', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+      ));
+      ///////////////// ajout du contrôle de la donnée
+      $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_couleur', array(
+        'label' => __('Sélectionner une couleur', 'theme_4w4'),
+        'section' => 'page_404_intra',
+      )));
+    
+    // Background 404 intra
+    $wp_customize->add_setting('background_404_intra', array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    ///////////////// ajout du contrôle de la donnée
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_404', array(
+      'label' => __('Image en arrière plan', 'theme_4w4'),
+      'section' => 'page_404_intra',
+    )));
       
       }
       
