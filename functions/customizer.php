@@ -144,7 +144,7 @@
 
       /////////////// Page erreur 404 Intra
       $wp_customize->add_section('section_404', array(
-        'title'    => 'Page 404',
+        'title'    => 'Page 404 Intra',
         'priority' => 30,
     ));
 
@@ -191,7 +191,7 @@
       'sanitize_callback' => 'esc_url_raw',
     ));
     ///////////////// ajout du contrôle de la donnée
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_404', array(
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_404_intra', array(
       'label' => __('Image en arrière plan', 'theme_4w4'),
       'section' => 'section_404',
     )));
