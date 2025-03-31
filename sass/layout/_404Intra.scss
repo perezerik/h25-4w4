@@ -43,12 +43,7 @@
         justify-content: center; 
         text-align: center; 
     }
-    .menu-suggestions-container li {
-        display: inline-block; // Ensures items remain in a row and wrap naturally
-        white-space: nowrap; // Prevents text from wrapping inside the item
-    }
-    
-    
+ 
     .menu-suggestions-container a {
         padding: 10px 15px;
         background: rgba(77, 199, 233, 0.3);
@@ -57,7 +52,18 @@
         font-weight: bold;
         border-radius: 5px;
         text-align: center;
-    } 
+    }
+
+    @media (max-width: 800px) {
+        .menu-suggestions-container ul {
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        .menu-suggestions-container a {
+            width: 45%;
+        }
+    }
 }
 
 

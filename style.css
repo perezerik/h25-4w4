@@ -473,10 +473,6 @@ footer {
   justify-content: center;
   text-align: center;
 }
-.page404_intra .menu-suggestions-container li {
-  display: inline-block;
-  white-space: nowrap;
-}
 .page404_intra .menu-suggestions-container a {
   padding: 10px 15px;
   background: rgba(77, 199, 233, 0.3);
@@ -485,4 +481,13 @@ footer {
   font-weight: bold;
   border-radius: 5px;
   text-align: center;
+}
+@media (max-width: 800px) {
+  .page404_intra .menu-suggestions-container ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .page404_intra .menu-suggestions-container a {
+    width: 45%;
+  }
 }/*# sourceMappingURL=style.css.map */
