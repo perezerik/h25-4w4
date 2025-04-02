@@ -28,6 +28,7 @@
     </section>
     <!-- ///////////////////Section rest API -->
     <section class="destination">
+        <?php categories_liste("destination") ?>
         <h2 class="destination__titre">Articles de la catégorie</h2>
         <div class="destination__list"></div>
     </section>
