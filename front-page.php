@@ -1,10 +1,14 @@
 <?php get_header();?>
 <?php  
-    
-    $hero_background = get_theme_mod('hero_background', '');
     $hero_couleur = get_theme_mod('hero_couleur', '');
+    for($k=0; $k<3; $k++){
+        $hero_background[$k] = get_theme_mod('hero_background_'. $k, '');
+    }
 ?>
-    <section class = "hero" style="background-image: url(<?php echo $hero_background ?>);  color: <?php echo $hero_couleur?>";>
+    <section class = "hero" style="color: <?php echo $hero_couleur?>";>
+            <div class="hero__caroussel" style="background-image: url(<?php echo $hero_background[0] ?>);"></div>
+            <div class="hero__caroussel" style="background-image: url(<?php echo $hero_background[1] ?>);"></div>
+            <div class="hero__caroussel" style="background-image: url(<?php echo $hero_background[2] ?>);"></div>
             <div class="hero__contenu global">
                 <?php  get_template_part('gabarits/hero'); ?>
                 <div class="hero__icone">

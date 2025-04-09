@@ -333,10 +333,17 @@ Les layouts
   }
 }
 .hero {
-  background-image: url("images/maldives.jpg");
+  position: relative;
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.hero__caroussel {
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  z-index: -1;
 }
 .hero__button {
   margin-top: 30px;
@@ -345,6 +352,9 @@ Les layouts
   border: 1px solid cyan;
   border-radius: 5px;
   background-color: cyan;
+}
+.hero__contenu {
+  z-index: 9;
 }
 
 .inscription {

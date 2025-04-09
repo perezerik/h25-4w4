@@ -7,6 +7,7 @@
       'options.php',
       'genere-boutons.php'
   );
+
   
   // Boucle pour inclure tous les fichiers
   foreach ($function_files as $file) {

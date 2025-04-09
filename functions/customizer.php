@@ -20,18 +20,20 @@
         'section' => 'hero_section',
         'type' => 'text',
       ));
+      for($k = 0; $k<3; $k++){
+        /////////////////Début du champ background
+        //////////////// ajout de la donnée image en background
+        $wp_customize->add_setting('hero_background', $k, array(
+          'default' => '',
+          'sanitize_callback' => 'esc_url_raw',
+        ));
+        ///////////////// ajout du contrôle de la donnée
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background'. $k, array(
+          'label' => __('Image en arrière plan' . ($k+1), 'theme_4w4'),
+          'section' => 'hero_section',
+        )));
+      }
       
-      /////////////////Début du champ background
-      //////////////// ajout de la donnée image en background
-      $wp_customize->add_setting('hero_background', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-      ));
-      ///////////////// ajout du contrôle de la donnée
-      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
-        'label' => __('Image en arrière plan', 'theme_4w4'),
-        'section' => 'hero_section',
-      )));
 
        /////////////////Début du champ couleur
       //////////////// ajout de la donnée couleur 
