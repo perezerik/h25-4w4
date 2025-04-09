@@ -1,14 +1,11 @@
-/*
-    Script js permettant d'extraire des destinations de voyage
-*/ 
-(function(){
+(function() {
     console.log("destination.js");
     const categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
     const domaine = window.location.href;
     const apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
     console.log(apiUrl);
  
-    function parcourir_bouton(){
+    function parcourir_bouton() {
         const categorie__ul__li = document.querySelectorAll(".categorie__ul__li");
         categorie__ul__li.forEach(elm => {
             elm.addEventListener('mousedown', (e) => {
@@ -41,12 +38,53 @@
  
                 data.forEach(article => {
                     const articleElement = document.createElement('div');
-                    articleElement.innerHTML = `
-                        <h3>${article.title.rendered}</h3>
-                        <p>${article.excerpt.rendered}</p>
-                        <a href="${article.link}">Lire plus</a>
-                    `;
+                    articleElement.classList.add('destination__item');
+
+                    // Crée le titre clickable
+                    const titleWrapper = document.createElement('div');
+                    titleWrapper.classList.add('destination__title-wrapper'); // Wrapper pour le titre et le bouton
+
+                    const title = document.createElement('h3');
+                    title.textContent = article.title.rendered;
+                    title.classList.add('destination__titre');
+
+                    const toggleButton = document.createElement('button');
+                    toggleButton.textContent = '...';
+                    toggleButton.classList.add('destination__toggle-button');
+
+                    // Crée le paragraphe masqué
+                    const paragraph = document.createElement('div');
+                    paragraph.classList.add('destination__texte');
+                    paragraph.innerHTML = article.excerpt.rendered;
+                    paragraph.style.display = 'none'; // Texte caché au début
+
+                    // Crée le lien "Lire plus"
+                    const link = document.createElement('a');
+                    link.href = article.link;
+                    link.textContent = 'Lire plus';
+                    link.style.display = 'none'; // Ne pas ... le lien au départ
+
+                    // Ajoute les éléments à leur wrapper
+                    titleWrapper.appendChild(title);
+                    titleWrapper.appendChild(toggleButton);
+                    articleElement.appendChild(titleWrapper);
+                    articleElement.appendChild(paragraph);
+                    articleElement.appendChild(link);
                     destinationList.appendChild(articleElement);
+
+                    toggleButton.addEventListener('click', () => {
+                        const isVisible = paragraph.style.display === 'block';
+                        if (isVisible) {
+                            paragraph.style.display = 'none'; // Cache le texte
+                            toggleButton.textContent = '...'; // Change le texte du bouton
+                            link.style.display = 'none'; // Cache le lien "Lire plus"
+                        } else {
+                            paragraph.style.display = 'block'; // Affiche le texte
+                            toggleButton.textContent = '...'; // Change le texte du bouton
+                            link.style.display = 'inline'; // Affiche le lien "Lire plus"
+                        }
+                    });
+
                 });
             })
             .catch(error => console.error('Erreur lors de la récupération des articles:', error));

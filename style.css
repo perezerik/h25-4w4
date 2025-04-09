@@ -225,12 +225,58 @@ Les composants
   justify-content: center;
 }
 .destination__list {
-  max-width: 800px;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.destination__item {
+  width: 300px; /* Taille fixe pour toutes les divs */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+}
+.destination__title-wrapper {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  margin-bottom: 10px;
+  width: 100%; /* Assurez-vous que l'espace soit bien utilisé */
+}
+.destination__titre {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  flex-grow: 1; /* Le titre prend tout l'espace disponible */
+}
+.destination__toggle-button {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+  padding: 0;
+}
+.destination__texte {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5;
+  display: none; /* Texte caché au début */
+}
+.destination__item a {
+  font-size: 0.9em;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.destination__toggle-button:focus {
+  outline: none;
 }
 
 /* ///////////////////////////////////
