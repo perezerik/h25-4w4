@@ -390,7 +390,21 @@ Les layouts
   min-height: 100vh;
   width: 100%;
   background-position: center;
-  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.hero .hero__caroussel.active {
+  opacity: 1;
+  z-index: 2;
+}
+.hero__contenu {
+  position: relative;
+  z-index: 3;
 }
 .hero__radio {
   position: absolute;
@@ -400,6 +414,7 @@ Les layouts
   justify-content: center;
   gap: 2rem;
   top: 90vh;
+  z-index: 4;
 }
 .hero__button {
   margin-top: 30px;
@@ -408,9 +423,6 @@ Les layouts
   border: 1px solid cyan;
   border-radius: 5px;
   background-color: cyan;
-}
-.hero__contenu {
-  z-index: 9;
 }
 
 .inscription {
@@ -424,7 +436,7 @@ Les layouts
   align-items: center;
   position: relative;
   margin: -2rem auto 0 auto;
-  z-index: 1;
+  z-index: 6;
 }
 .inscription__form {
   display: flex;

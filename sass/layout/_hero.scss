@@ -1,19 +1,34 @@
-.hero{
+.hero {
     position: relative;
-    // background-image: url("images/maldives.jpg");
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 
-    &__caroussel{
+    &__caroussel {
         position: absolute;
         min-height: 100vh;
-        width : 100%;
+        width: 100%;
         background-position: center;
-        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
     }
 
-    &__radio{
+    .hero__caroussel.active {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    &__contenu {
+        position: relative;
+        z-index: 3; 
+    }
+
+    &__radio {
         position: absolute;
         width: 100%;
         bottom: 0;
@@ -21,19 +36,15 @@
         justify-content: center;
         gap: 2rem;
         top: 90vh;
+        z-index: 4; 
     }
 
-    &__button{
+    &__button {
         margin-top: 30px;
         margin-bottom: 30px;
         padding: 15px;
         border: 1px solid cyan;
         border-radius: 5px;
         background-color: cyan;
-        
-    }
-
-    &__contenu{
-        z-index: 9;
     }
 }

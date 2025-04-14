@@ -5,12 +5,12 @@
         $hero_background[$k] = get_theme_mod('hero_background_'. $k, '');
     }
 ?>
-    <section class = "hero" style="color: <?php echo $hero_couleur?>";>
+    <section class = "hero" style="color: <?php echo $hero_couleur; ?>">
             <div class="hero__caroussel" style="background-image: url(<?php echo $hero_background[0] ?>);"></div>
             <div class="hero__caroussel" style="background-image: url(<?php echo $hero_background[1] ?>);"></div>
             <div class="hero__caroussel" style="background-image: url(<?php echo $hero_background[2] ?>);"></div>
             <div class="hero__radio">
-                <input class="hero__radio__input" data-id_radio="0" type="radio" name="carrousel">
+                <input class="hero__radio__input" data-id_radio="0" type="radio" name="carrousel" checked="checked">
                 <input class="hero__radio__input" data-id_radio="1" type="radio" name="carrousel">
                 <input class="hero__radio__input" data-id_radio="2" type="radio" name="carrousel">
             </div>
