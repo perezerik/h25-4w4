@@ -1,3 +1,13 @@
+
+/* Animation fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .destination{
     display: flex;
     flex-direction: column;
@@ -20,7 +30,14 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
+        
     }
+
+    .destination__item:hover {
+        transform: translateY(-5px); /* Slight lift effect */
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    }
+     
 
     &__title-wrapper {
         display: flex;
@@ -53,6 +70,8 @@
         color: #333;
         line-height: 1.5;
         display: none; 
+        animation: fadeIn 0.5s ease-in-out; /* Ajout de l'animation fade-in */
+ 
     }
 
     &__item a {

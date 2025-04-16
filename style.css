@@ -218,6 +218,15 @@ Les composants
   background-color: #0056b3;
 }
 
+/* Animation fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .destination {
   display: flex;
   flex-direction: column;
@@ -239,6 +248,10 @@ Les composants
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+}
+.destination .destination__item:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 .destination__title-wrapper {
   display: flex;
@@ -268,6 +281,7 @@ Les composants
   color: #333;
   line-height: 1.5;
   display: none;
+  animation: fadeIn 0.5s ease-in-out; /* Ajout de l'animation fade-in */
 }
 .destination__item a {
   font-size: 0.9em;
@@ -475,6 +489,11 @@ Les layouts
 footer {
   background-color: rgb(236, 136, 13);
   color: black;
+}
+
+.vague {
+  position: relative;
+  top: 20px;
 }
 
 .piedpage {
