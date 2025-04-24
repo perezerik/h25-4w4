@@ -5,7 +5,7 @@
   $function_files = array(
       'customizer.php',
       'options.php',
-      'genere-boutons.php'
+      'generateur.php'
   );
 
   

@@ -2,9 +2,12 @@
     $footer_adresse = get_theme_mod('footer_adresse', 'Default Title');  
     $footer_telephone = get_theme_mod('footer_telephone', 'Default Title');  
     $footer_mission = get_theme_mod('footer_mission', 'Default Title'); 
-  ?>
-<svg class="vague" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ec880d" fill-opacity="1" d="M0,64L40,106.7C80,149,160,235,240,229.3C320,224,400,128,480,117.3C560,107,640,181,720,229.3C800,277,880,299,960,261.3C1040,224,1120,128,1200,117.3C1280,107,1360,181,1400,218.7L1440,256L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-<footer>
+    $footer_couleur = get_theme_mod('footer_couleur', 'Default Title');
+
+  genere_vague($footer_couleur);
+?>
+
+<footer style="background-color: <?= $footer_couleur ?>">
   <div class="piedpage">
     <section class="piedpage__s1">
       <div class="piedpage__s1__externe">
