@@ -20,19 +20,34 @@
         'section' => 'hero_section',
         'type' => 'text',
       ));
-      for($k = 0; $k<3; $k++){
-        /////////////////Début du champ background
-        //////////////// ajout de la donnée image en background
-        $wp_customize->add_setting('hero_background_' . $k, array(
-          'default' => '',
-          'sanitize_callback' => 'esc_url_raw',
-        ));
-        ///////////////// ajout du contrôle de la donnée
-        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_' . $k, array(
-          'label' => __('Image en arrière plan' . ($k+1), 'theme_4w4'),
-          'section' => 'hero_section',
-        )));
-      }
+      // Nombre d'images dans le carrousel
+      // $wp_customize->add_setting('hero_nombre_images', array(
+      //   'default' => 3,
+      //   'sanitize_callback' => 'absint', // pour sécuriser un entier
+      // ));
+
+      // $wp_customize->add_control('hero_nombre_images', array(
+      //   'label' => __('Nombre d\'images pour le carrousel', 'theme_4w4'),
+      //   'section' => 'hero_section',
+      //   'type' => 'number',
+      //   'input_attrs' => array(
+      //     'min' => 1,
+      //     'max' => 10 // Tu peux choisir la limite que tu veux
+      //   )
+      // ));
+      // for($k = 0; $k<3; $k++){
+      //   /////////////////Début du champ background
+      //   //////////////// ajout de la donnée image en background
+      //   $wp_customize->add_setting('hero_background_' . $k, array(
+      //     'default' => '',
+      //     'sanitize_callback' => 'esc_url_raw',
+      //   ));
+      //   ///////////////// ajout du contrôle de la donnée
+      //   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_' . $k, array(
+      //     'label' => __('Image en arrière plan' . ($k+1), 'theme_4w4'),
+      //     'section' => 'hero_section',
+      //   )));
+      // }
       
 
        /////////////////Début du champ couleur
@@ -46,7 +61,38 @@
         'label' => __('Sélectionner une couleur', 'theme_4w4'),
         'section' => 'hero_section',
       )));
-      
+
+      // ========== Ajout du champ Nombre d'images ==========
+      $wp_customize->add_setting('hero_nombre_images', array(
+        'default' => 3,
+        'sanitize_callback' => 'absint',
+      ));
+
+      $wp_customize->add_control('hero_nombre_images', array(
+        'label' => __('Nombre d\'images pour le carrousel', 'theme_4w4'),
+        'section' => 'hero_section',
+        'type' => 'number',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 10, // Tu peux changer la limite max
+        ),
+      ));
+
+      // ========== Ajout dynamique des images ==========
+      $nombre_images = get_theme_mod('hero_nombre_images', 3); // Utiliser la valeur enregistrée ou 3 par défaut
+
+      for ($k = 0; $k < $nombre_images; $k++) {
+        $wp_customize->add_setting('hero_background_' . $k, array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_' . $k, array(
+            'label' => __('Image en arrière-plan ' . ($k + 1), 'theme_4w4'),
+            'section' => 'hero_section',
+        )));
+      }
+            
       // Début de la zone footer
       // Création d'un nouvelle section dans le customizer
       $wp_customize->add_section('footer_section', array(
