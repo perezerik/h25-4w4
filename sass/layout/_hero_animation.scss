@@ -1,0 +1,39 @@
+// Animation principale pour le contenu
+.hero__titre, .hero__description {
+    position: relative;
+    animation: contenu linear 1s forwards;
+  }
+  
+  .hero__titre {
+    transform: translateY(-1000px);
+  }
+  
+  .hero__description {
+    transform: translateX(-1000px);
+  }
+  
+  @keyframes contenu {
+    100% {
+      transform: translate(0, 0);
+      animation-delay: 1s;
+    }
+  }
+  
+  // Nouvelle animation "Slide Up" simplifiée
+  .hero__animation--slide-up {
+    transform: translateY(100vh); /* Départ en bas */
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100vh); /* Départ en bas */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* Arrivée en haut */
+      opacity: 1; /* Devient visible */
+    }
+  }
+  
