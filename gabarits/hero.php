@@ -31,15 +31,18 @@ for ($k = 0; $k < $hero_nombre_images; $k++) {
     </div>
 
     <div class="hero__contenu global">
-        <div class="hero__animation">
+        <div class="hero__animation hero__animation--active">
             <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
             <p class="hero__description"><?php bloginfo('description'); ?></p>
+        </div>
+        <div class="hero__animation">
+            <h1 class="hero__titre">lorem</h1>
+            <p class="hero__description">lorem ?></p>
         </div>
         <div class="hero__animation">
             <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
             <p class="hero__description"><?php bloginfo('description'); ?></p>
         </div>
-        
 
         <p class="hero__courriel"><?php bloginfo('admin_email'); ?></p>
         <p class="hero__adresse">5800 Sherbrooke-est Montréal (Québec) H1X 2A2</p>

@@ -2,7 +2,7 @@
     console.log("caroussel.js")
     let hero__radio__input = document.querySelectorAll(".hero__radio__input")
     let hero__caroussels = document.querySelectorAll(".hero__caroussel");
-    let hero__animations = document.querySelectorAll(".hero__animation");
+    let hero__animation = document.querySelectorAll(".hero__animation");
 
     console.log("hero__radio__input.length : ",hero__radio__input.length);
 
@@ -20,28 +20,25 @@
             hero__caroussels[index].classList.add("active");
         }
 
-        // Animation du contenu
-        alternerAnimations();
+        changementAnimation(indexActuel);
     }
 
-    let animationIndex = 0; // 0 pour première animation, 1 pour deuxième
+    function changementAnimation(index){
+        hero__radio__input[index].checked = true;
 
-    function alternerAnimations(){
-        if (animationIndex % 2 === 0) {
-            // Première animation classique
-            hero__animations[0].style.display = "block";
-            hero__animations[1].style.display = "none";
-        } else {
-            // Deuxième animation "Slide Up" avec rebond
-            hero__animations[1].style.display = "block";
-            hero__animations[1].classList.add("hero__animation--slide-up");
-            hero__animations[0].style.display = "none";
+        // Supprime "active" de toutes les caroussels
+        hero__animation.forEach(c => c.classList.remove("hero__animation--active"));
+
+        // Ajoute "active" au carrousel correspondant
+        if (hero__animation[index]) {
+            hero__animation[index].classList.add("hero__animation--active");
         }
-        animationIndex++;
     }
+
 
     // Déclenche une fois au chargement
     changementAutomatique(indexActuel);
+
 
     // Change toutes les 5 secondes
     setInterval(() => {
