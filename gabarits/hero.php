@@ -23,10 +23,19 @@ for ($k = 0; $k < $hero_nombre_images; $k++) {
     <?php endforeach; ?>
 
     <div class="hero__radio">
-        <?php foreach ($hero_background as $index => $background_url) : ?>
-            <?php if (!empty($background_url)) : ?>
-                <input class="hero__radio__input" data-id_radio="<?php echo esc_attr($index); ?>" type="radio" name="carrousel" <?php echo ($index === 0) ? 'checked="checked"' : ''; ?>>
-            <?php endif; ?>
+    <?php foreach ($hero_background as $index => $background_url) : ?>
+        <?php if (!empty($background_url)) : ?>
+            <label class="hero__radio__label">
+                <input 
+                    class="hero__radio__input" 
+                    data-id_radio="<?php echo esc_attr($index); ?>" 
+                    type="radio" 
+                    name="carrousel" 
+                    <?php echo ($index === 0) ? 'checked="checked"' : ''; ?>
+                >
+                <span class="hero__radio__custom"></span>
+            </label>
+        <?php endif; ?>
         <?php endforeach; ?>
     </div>
 
@@ -36,12 +45,12 @@ for ($k = 0; $k < $hero_nombre_images; $k++) {
             <p class="hero__description"><?php bloginfo('description'); ?></p>
         </div>
         <div class="hero__animation">
-            <h1 class="hero__titre">lorem</h1>
-            <p class="hero__description">lorem ?></p>
+            <h1 class="hero__titre">Partez à la rencontre du monde autrement.</h1>
+            <p class="hero__description">Voyages du Monde vous emmène hors des sentiers battus, là où la culture locale, la nature sauvage et l’aventure s’unissent pour une expérience hors du commun. Explorez, ressentez, vivez chaque instant.</p>
         </div>
         <div class="hero__animation">
-            <h1 class="hero__titre"><?php bloginfo('name'); ?></h1>
-            <p class="hero__description"><?php bloginfo('description'); ?></p>
+            <h1 class="hero__titre">Chaque destination a une histoire. Écrivez la vôtre</h1>
+            <p class="hero__description">Avec Voyages du Monde, transformez vos rêves d’évasion en réalité. Des itinéraires personnalisés, des rencontres inoubliables et des découvertes uniques vous attendent à chaque étape.</p>
         </div>
 
         <p class="hero__courriel"><?php bloginfo('admin_email'); ?></p>

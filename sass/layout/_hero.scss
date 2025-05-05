@@ -47,4 +47,29 @@
         border-radius: 5px;
         background-color: cyan;
     }
+
+
+    &__radio__label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    &__radio__input {
+        display: none; // Cache le vrai bouton radio
+    }
+
+    &__radio__custom {
+        width: 14px;
+        height: 14px;
+        border: 2px solid white;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    &__radio__input:checked + &__radio__custom {
+        background-color: white;
+    }
 }

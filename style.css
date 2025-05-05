@@ -444,6 +444,26 @@ Les layouts
   border-radius: 5px;
   background-color: cyan;
 }
+.hero__radio__label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.hero__radio__input {
+  display: none;
+}
+.hero__radio__custom {
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.hero__radio__input:checked + .hero__radio__custom {
+  background-color: white;
+}
 
 .inscription {
   width: fit-content;
