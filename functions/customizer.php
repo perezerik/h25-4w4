@@ -121,6 +121,18 @@
         'section' => 'footer_section',
       )));
 
+      //////////////Debut ajout image destination
+      $wp_customize->add_setting('footer_image_destination', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw', // Pour sécuriser l'URL de l'image
+      ));
+      
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_image_destination', array(
+        'label' => __('Image de Destination', 'theme_4w4'),
+        'section' => 'footer_section',
+        'settings' => 'footer_image_destination',
+      )));
+
       /////////////// Page erreur 404
         $wp_customize->add_section('page_404', array(
           'title'    => 'Page 404',

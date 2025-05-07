@@ -39,7 +39,29 @@ footer{
     }
 
     &__mission{
+        position: relative;
         flex: 1 0 30%;
+        padding: 20px;
+        
+        &__background{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0.4; /* Réduire l'opacité pour permettre au texte d'être visible */
+            z-index: 0; /* L'image est en arrière-plan */
+            filter: brightness(0.5); /* Facultatif : ajuster la luminosité pour mieux voir le texte */
+            border-radius: 1rem; // ← ici tu arrondis les coins (ajuste la valeur au besoin)
+            overflow: hidden;     // ← utile si du contenu déborde
+        }
+        &__texte{
+            position: relative;
+            z-index: 10; 
+            padding: 20px;
+        }
     }
   }
 
@@ -48,5 +70,6 @@ footer{
     flex-direction: column; 
     align-items: center; 
   }
+
 
 }

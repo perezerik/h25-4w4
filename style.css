@@ -552,7 +552,28 @@ footer {
   flex: 1 0 400px;
 }
 .piedpage__s1__mission {
+  position: relative;
   flex: 1 0 30%;
+  padding: 20px;
+}
+.piedpage__s1__mission__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.4; /* Réduire l'opacité pour permettre au texte d'être visible */
+  z-index: 0; /* L'image est en arrière-plan */
+  filter: brightness(0.5); /* Facultatif : ajuster la luminosité pour mieux voir le texte */
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.piedpage__s1__mission__texte {
+  position: relative;
+  z-index: 10;
+  padding: 20px;
 }
 .piedpage__s2 {
   display: flex;
