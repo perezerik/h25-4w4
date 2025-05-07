@@ -20,16 +20,22 @@
       $categories = get_the_category();
       $categorie_actuelle = get_queried_object();
 
-      if (is_category() && $categorie_actuelle) {
-        echo '<ul class="post-categories">';
-        foreach ($categories as $categorie) {
-          if ($categorie->slug != $categorie_actuelle->slug) {
-            echo '<li><a href="' . get_category_link($categorie->term_id) . '">' . $categorie->name . '</a></li>';
-          }
-        }
-        echo '</ul>';
+      // if (is_category() && $categorie_actuelle) {
+      //   echo '<ul class="post-categories">';
+      //   foreach ($categories as $categorie) {
+      //     if ($categorie->slug != $categorie_actuelle->slug) {
+      //       echo '<li><a href="' . get_category_link($categorie->term_id) . '">' . $categorie->name . '</a></li>';
+      //     }
+      //   }
+      //   echo '</ul>';
+      // } else {
+      //   the_category();
+      // }
+      if (is_category()) {
+        $categorie_actuelle = get_queried_object();
+        categorie_par_destination($categorie_actuelle);
       } else {
-        the_category();
+        categorie_par_destination('populaire');
       }
     ?>
     <p>Température maximum : <?php the_field('temperature_maximum'); ?> C</p>
