@@ -49,14 +49,13 @@
                     title.classList.add('destination__titre');
 
                     const toggleButton = document.createElement('button');
-                    toggleButton.textContent = '...';
+                    toggleButton.textContent = '˅';
                     toggleButton.classList.add('destination__toggle-button');
 
                     // Crée le paragraphe masqué
                     const paragraph = document.createElement('div');
                     paragraph.classList.add('destination__texte');
                     paragraph.innerHTML = article.excerpt.rendered;
-                    paragraph.style.display = 'none'; // Texte caché au début
 
                     // Crée le lien "Lire plus"
                     const link = document.createElement('a');
@@ -73,16 +72,10 @@
                     destinationList.appendChild(articleElement);
 
                     toggleButton.addEventListener('click', () => {
-                        const isVisible = paragraph.style.display === 'block';
-                        if (isVisible) {
-                            paragraph.style.display = 'none'; // Cache le texte
-                            toggleButton.textContent = '...'; // Change le texte du bouton
-                            link.style.display = 'none'; // Cache le lien "Lire plus"
-                        } else {
-                            paragraph.style.display = 'block'; // Affiche le texte
-                            toggleButton.textContent = '...'; // Change le texte du bouton
-                            link.style.display = 'inline'; // Affiche le lien "Lire plus"
-                        }
+                        paragraph.classList.toggle('open');
+                        const isOpen = paragraph.classList.contains('open');
+                        toggleButton.textContent = isOpen ? '˄' : '˅'; // Icône dynamique
+                        link.style.display = isOpen ? 'inline' : 'none';
                     });
 
                 });

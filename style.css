@@ -280,8 +280,14 @@ Les composants
   font-size: 1em;
   color: #333;
   line-height: 1.5;
-  display: none;
-  animation: fadeIn 0.5s ease-in-out; /* Ajout de l'animation fade-in */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+.destination__texte.open {
+  max-height: 500px;
+  opacity: 1;
 }
 .destination__item a {
   font-size: 0.9em;
