@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     &__navigation{
         @media screen and (max-width: 800px){
             position: absolute;
@@ -22,18 +23,22 @@
         background-color: transparent;
         display: flex;
         align-items: center;
+        gap: 30px;
+        padding-right: 30px;
     }
 
     &__logo{
         img{
-            width: 20vw;
+            width: 100%;
+            max-width: 220px;
+            height: auto;
         }
     }
 
     .custom-logo {
-        max-width: 250px;
+        max-width: 220px;
         height: auto;
-        }
+    }
 }
 
 /*Rendre invisible le checkbox */
@@ -42,6 +47,40 @@
 }
 
 @media screen and (max-width: 800px){
+    .entete__recherche {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+        form {
+          width: 80%; /* Peut être ajusté selon le résultat */
+          max-width: 400px; /* Limite la largeur du champ */
+          display: flex;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          overflow: hidden;
+        }
+    
+        input[type="search"] {
+          flex: 1;
+          padding: 10px;
+          border: none;
+          outline: none;
+        }
+    
+        input[type="submit"] {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 0 15px;
+          cursor: pointer;
+    
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
     // Menu Burger
     .trait {
         top:0;
@@ -83,5 +122,4 @@
     #maCheckbox:checked ~ .entete__navigation {
         transform: translateX(0);
     }
-    
 }

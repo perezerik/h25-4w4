@@ -369,6 +369,8 @@ Les layouts
   background-color: transparent;
   display: flex;
   align-items: center;
+  gap: 30px;
+  padding-right: 30px;
 }
 @media screen and (max-width: 800px) {
   .entete__navigation {
@@ -386,10 +388,12 @@ Les layouts
   }
 }
 .entete__logo img {
-  width: 20vw;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
 }
 .entete .custom-logo {
-  max-width: 250px;
+  max-width: 220px;
   height: auto;
 }
 
@@ -399,6 +403,36 @@ Les layouts
 }
 
 @media screen and (max-width: 800px) {
+  .entete__recherche {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .entete__recherche form {
+    width: 80%; /* Peut être ajusté selon le résultat */
+    max-width: 400px; /* Limite la largeur du champ */
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .entete__recherche input[type=search] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  .entete__recherche input[type=submit] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+  .entete__recherche input[type=submit]:hover {
+    background-color: #0056b3;
+  }
   .trait {
     top: 0;
     right: 0;
