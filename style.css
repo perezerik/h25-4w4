@@ -764,4 +764,56 @@ footer {
   padding: 20px;
   border-left: 6px solid #0077b6;
   border-radius: 8px;
+}
+
+.recherche__section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.recherche__titre {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.recherche__section article {
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.recherche__section article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+.recherche__section article h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.recherche__section article h5 a {
+  color: #333;
+  text-decoration: none;
+}
+.recherche__section article h5 a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+.recherche__section article p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+.recherche__section article hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin-top: 1rem;
 }/*# sourceMappingURL=style.css.map */
