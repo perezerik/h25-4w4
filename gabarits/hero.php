@@ -59,7 +59,7 @@ for ($k = 0; $k < $hero_nombre_images; $k++) {
         <p class="hero__auteur">Auteur: <?php echo esc_html($hero_auteur); ?></p>
         <button class="hero__button">S'inscrire</button>
         <div class="hero__icone">
-            <?php get_template_part('gabarits/icones'); ?>
+            <?php afficher_icones_sociales(); ?>
         </div>
     </div>
 </section>

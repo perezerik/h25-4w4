@@ -57,3 +57,24 @@ function categorie_par_destination($cat_a_retirer = '') {
         echo '</ul>';
     }
 }
+
+function afficher_icones_sociales() {
+    $nb_icones = get_theme_mod('nombre_icones_sociales', 3);
+
+    if ($nb_icones <= 0) return;
+
+    echo '<ul class="icones-sociales">';
+    for ($i = 0; $i < $nb_icones; $i++) {
+        $url = esc_url(get_theme_mod("social_url_$i"));
+        $icon = esc_url(get_theme_mod("social_icon_$i"));
+
+        if ($url && $icon) {
+            echo '<li>';
+            echo '<a href="' . $url . '" target="_blank" rel="noopener noreferrer">';
+            echo '<img src="' . $icon . '" alt="Icône sociale ' . ($i + 1) . '">';
+            echo '</a>';
+            echo '</li>';
+        }
+    }
+    echo '</ul>';
+}
