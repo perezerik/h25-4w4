@@ -20,7 +20,6 @@
       $categories = get_the_category();
       $categorie_actuelle = get_queried_object();
       if (is_category()) {
-        $categorie_actuelle = get_queried_object();
         categorie_par_destination($categorie_actuelle);
       } else {
         categorie_par_destination('populaire');
