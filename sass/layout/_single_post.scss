@@ -1,0 +1,41 @@
+.single-post {
+    padding: 2rem;
+    background-color: #f9f9f9;
+
+  
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+  
+      .haut-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+  
+        img {
+          width: 100%;
+          max-height: 400px;
+          object-fit: cover;
+          border-radius: 1rem;
+        }
+  
+        h2 {
+          font-size: 2rem;
+          margin-top: 1rem;
+          color: #333;
+        }
+  
+        p {
+          font-size: 0.95rem;
+          color: #666;
+        }
+  
+    
+      }
+  
+      
+    }
+}
+  
