@@ -7,7 +7,7 @@
                         <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail('large'); ?>
                         <?php else : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/default.jpg" alt="Image par défaut">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/default.png" alt="Image par défaut">
                         <?php endif; ?>
                             <h2><?php the_title(); ?></h2>
                             <p>Par <?php the_author(); ?> | Publié le <?php the_time('j F Y'); ?></p>
