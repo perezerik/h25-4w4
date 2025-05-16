@@ -925,4 +925,15 @@ footer {
 .single-post article .temperatures p {
   margin: 0;
   color: #003366;
+}
+@media (max-width: 768px) {
+  .single-post .global {
+    padding: 1rem;
+  }
+  .single-post article header h2 {
+    font-size: 1.5rem;
+  }
+  .single-post .temperatures {
+    font-size: 0.95rem;
+  }
 }/*# sourceMappingURL=style.css.map */
