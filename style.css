@@ -911,4 +911,18 @@ footer {
   font-size: 1rem;
   line-height: 1.7;
   color: #444;
+}
+.single-post article .temperatures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  background: #eef6ff;
+  padding: 1rem;
+  border-left: 5px solid #0077cc;
+  border-radius: 0.5rem;
+}
+.single-post article .temperatures p {
+  margin: 0;
+  color: #003366;
 }/*# sourceMappingURL=style.css.map */

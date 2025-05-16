@@ -41,6 +41,23 @@
         color: #444;
       }
   
+      .temperatures {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 1rem;
+        background: #eef6ff;
+        padding: 1rem;
+        border-left: 5px solid #0077cc;
+        border-radius: 0.5rem;
+  
+        p {
+          margin: 0;
+          color: #003366;
+        }
+      }
     }
+  
+    
   }
   
