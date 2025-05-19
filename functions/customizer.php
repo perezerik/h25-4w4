@@ -286,7 +286,24 @@
           'label' => sprintf(__('Icône #%d', 'theme_4w4'), $i + 1),
           'section' => 'social_section',
       )));
-      }      
+      }
+      
+      
+      // === Image par défaut pour les articles (si pas de thumbnail) ===
+      $wp_customize->add_section('single_post_section', array(
+        'title' => __('Image par défaut - Articles', 'theme_4w4'),
+        'priority' => 35,
+      ));
+
+      $wp_customize->add_setting('default_post_thumbnail', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+      ));
+
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'default_post_thumbnail', array(
+        'label' => __('Image par défaut pour les articles', 'theme_4w4'),
+        'section' => 'single_post_section',
+      )));
     }
       
       add_action('customize_register', 'theme_4w4_customize_register');

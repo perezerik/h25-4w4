@@ -1,14 +1,19 @@
+<?php
+    $default_thumbnail = get_theme_mod('default_post_thumbnail');
+?>
 <?php get_header();?>
     <section class="populaire">
         <div class="global single-post">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <article>
                     <div class="haut-page">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <?php the_post_thumbnail('large'); ?>
-                        <?php else : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/default.png" alt="Image par défaut">
+                    <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail('large'); ?>
+                    <?php else : 
+                        if ($default_thumbnail): ?>
+                            <img src="<?php echo esc_url($default_thumbnail); ?>" alt="Image par défaut">
                         <?php endif; ?>
+                    <?php endif; ?>
                             <h2><?php the_title(); ?></h2>
                             <p>Par <?php the_author(); ?> | Publié le <?php the_time('j F Y'); ?></p>
                     </div>

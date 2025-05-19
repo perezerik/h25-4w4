@@ -1,5 +1,5 @@
 # TP1
-## Concevoir un site Wordpress pour un club de voyagge
+## Concevoir un site Wordpress pour un club de voyagge dans un contexte scolaire
 
 ### Auteur: Erik Perez
 
