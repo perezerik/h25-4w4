@@ -26,6 +26,8 @@ $pays = [
         <h2><?php the_field('titre_evenement'); ?></h2>
         <h2>Date du prochain événement :</h2>
         <?php the_field('date_evenement'); ?></p>
+        <h2>Coordonnées de l'évènement</h2>
+        <?php the_field('coordonne_evenement'); ?></p>
         <!-- ////////////////////////////////////////////////  section rest-api -->
         
         <section class="destination">
