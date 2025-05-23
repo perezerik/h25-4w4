@@ -19,15 +19,20 @@ $pays = [
 
     <div class="global" >
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <article>
+        <article class="template__pays">
             <h2><?php the_title(); ?></h2>
-            <div><?php the_content() ?>
+            <div><?php the_content(); ?></div>
+        </article>
         <?php endwhile; endif; ?>
-        <h2><?php the_field('titre_evenement'); ?></h2>
-        <h2>Date du prochain événement</h2>
-        <?php the_field('date_evenement'); ?></p>
-        <h2>Coordonnées de l'évènement</h2>
-        <?php the_field('coordonne_evenement'); ?></p>
+
+        <div class="evenement">
+            <h2><?php the_field('titre_evenement'); ?></h2>
+            <h2>Date du prochain événement</h2>
+            <p><?php the_field('date_evenement'); ?></p>
+            <h2>Coordonnées de l'évènement</h2>
+            <p><?php the_field('coordonne_evenement'); ?></p>
+        </div>
+
         <!-- ////////////////////////////////////////////////  section rest-api -->
         
         <section class="destination">

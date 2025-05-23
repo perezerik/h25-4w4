@@ -992,4 +992,55 @@ footer {
   to {
     transform: translate(50%, 50%);
   }
+}
+.template__pays {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease both;
+}
+.template__pays h2 {
+  font-size: 1.75rem;
+  color: #f97316;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f97316;
+  padding-bottom: 0.5rem;
+}
+.template__pays div {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.evenement {
+  background: #fff5ec;
+  border-left: 5px solid #f97316;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  max-width: 700px;
+}
+.evenement h2 {
+  color: #e65100;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+.evenement p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
