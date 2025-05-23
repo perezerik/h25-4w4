@@ -939,4 +939,57 @@ footer {
   .single-post .temperatures {
     font-size: 0.95rem;
   }
+}
+
+.menu-pays {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.menu-pays__bouton {
+  background: linear-gradient(145deg, #a0e7e5, #b4f8c8);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #064420;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.menu-pays__bouton:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #b4f8c8, #a0e7e5);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.menu-pays__bouton::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10.01%);
+  background-size: 10% 10%;
+  animation: ripple 6s linear infinite;
+  z-index: 0;
+}
+.menu-pays__bouton:hover::after {
+  animation-duration: 3s;
+}
+
+@keyframes ripple {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(50%, 50%);
+  }
 }/*# sourceMappingURL=style.css.map */
