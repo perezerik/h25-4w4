@@ -110,14 +110,12 @@
                 fetchArticles({ search: pays });
             });
         });
-
-        // Charger la France par défaut si présente
-        fetchArticles({ search: "France" });
         
     }
 
     // Initialisation
     activerBoutonsCategorie();
     activerBoutonsPays();
+    window.fetchArticles = fetchArticles;
 })();
 

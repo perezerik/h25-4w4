@@ -6,7 +6,9 @@
 
     $footer_image_destination = get_theme_mod('footer_image_destination');
 
-    genere_vague($footer_couleur);
+    // genere_vague($footer_couleur);
+   
+
 ?>
 
 <footer style="background-color: <?= $footer_couleur ?>">
