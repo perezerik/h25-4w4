@@ -9,6 +9,7 @@
             <?php endwhile; endif; ?>
         </div>
     </section>
+    <?php creer_vague_avec_gradient("#ff9a9e", "#f97316"); ?>
     <?php get_footer()?>
 </body>
 </html>

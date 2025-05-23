@@ -21,6 +21,7 @@
         <div class="destination__list"></div>
     </section>
     <footer></footer>
+    <?php creer_vague_avec_gradient("#ff9a9e", "#f97316"); ?>
     <?php get_footer()?>
 </body>
 </html>

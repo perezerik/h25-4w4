@@ -26,4 +26,5 @@ get_header();
         <?php endif; ?>
     </section>
 </main>
+<?php creer_vague_avec_gradient("#ff9a9e", "#f97316"); ?>
 <?php get_footer(); ?>
