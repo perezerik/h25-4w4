@@ -3,6 +3,10 @@
 Template Name: Pays
 */
 get_header();
+$pays = [
+    'France', 'États-Unis', 'Canada', 'Argentine', 'Chili', 'Italie',
+    'Islande', 'Chine', 'Grèce', 'Suisse', 'Japon', 'Maroc', 'Belgique', 'Mexique'
+  ];
 ?>
 <section class="populaire">
     <div class="global">
@@ -18,8 +22,14 @@ get_header();
          <p><?php the_field('description_evenement'); ?></p>
         <!-- ////////////////////////////////////////////////  section rest-api -->
         <section class="destination">
-            <?php categories_liste("destination") ?>
             <h2 class="destination__titre">Articles de la catégorie</h2>
+            <div class="menu-pays">
+            <?php foreach ($pays as $nom): ?>
+                <button class="menu-pays__bouton" data-search="<?= esc_attr($nom) ?>">
+                <?= esc_html($nom) ?>
+                </button>
+            <?php endforeach; ?>
+            </div>
             <div class="destination__list"></div>
         </section>
     </div>
